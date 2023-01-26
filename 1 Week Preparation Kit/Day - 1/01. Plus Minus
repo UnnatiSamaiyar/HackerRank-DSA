@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    
+    int arr[n];
+    
+    float negative=0, positive=0, zero=0;
+    
+    for(int i=0; i<n; i++){
+        int value;
+        cin>>value;
+        
+        positive = positive + (value>0);
+        negative = negative + (value<0);
+        zero = zero + (value == 0);
+    }
+    positive = positive/double(n);
+    negative = negative/double(n);
+    zero = zero/double(n);
+    
+    cout<<positive<<endl;
+    cout<<negative<<endl;
+    cout<<zero<<endl;
+}
